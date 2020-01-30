@@ -2,6 +2,9 @@ import random
 import sys 
 #from colored import fg, bg, attr
 
+#I wrote this comment to practise github commands
+
+
 def instruction():
     print("")
     print("Color Codes:")
