@@ -1,6 +1,6 @@
 import random
 import sys 
-from colored import fg, bg, attr
+#from colored import fg, bg, attr
 
 def instruction():
     print("")
@@ -43,7 +43,7 @@ def menu():
         if help_command != 'help' or help_command != 'start' or help_command != 'quit':
             print("Invalid command '{}'. Please try again".format(help_command))
 
-def coloring(lists):
+#def coloring(lists):
     color = ['r','r','r','r']
     for i in range(4):
         if lists[i] == "R":
@@ -66,22 +66,22 @@ def coloring(lists):
     return color
 
 def printing():
-    color_top = coloring(top)
-    color_bottom = coloring(bottom)
-    color_rs = coloring(right_side)
-    color_ls = coloring(left_side)
-    color_front = coloring(front)
-    color_back = coloring(back)
+    color_top = top
+    color_bottom = bottom
+    color_rs = right_side
+    color_ls = left_side
+    color_front = front
+    color_back = back
     
-    print("               {}  {}".format(color_top[0]+top[0],color_top[1]+top[1]))
-    print("               {}  {}".format(color_top[2]+top[2],color_top[3]+top[3]))
+    print("               {}  {}".format(color_top[0],color_top[1]))
+    print("               {}  {}".format(color_top[2],color_top[3]))
     print("")
-    print("{}   {}          {}  {}          {}  {}          {}  {}".format(color_ls[0]+left_side[0],color_ls[1]+left_side[1],color_front[0]+front[0],color_front[1]+front[1],color_rs[0]+right_side[0],color_rs[1]+right_side[1],color_back[0]+back[0],color_back[1]+back[1]))
-    print("{}   {}          {}  {}          {}  {}          {}  {}".format(color_ls[2]+left_side[2],color_ls[3]+left_side[3],color_front[2]+front[2],color_front[3]+front[3],color_rs[2]+right_side[2],color_rs[3]+right_side[3],color_back[2]+back[2],color_back[3]+back[3]))
+    print("{}   {}          {}  {}          {}  {}          {}  {}".format(color_ls[0],color_ls[1],color_front[0],color_front[1],color_rs[0],color_rs[1],color_back[0],color_back[1]))
+    print("{}   {}          {}  {}          {}  {}          {}  {}".format(color_ls[2],color_ls[3],color_front[2],color_front[3],color_rs[2],color_rs[3],color_back[2],color_back[3]))
     print("")
-    print("               {}  {}".format(color_bottom[0]+bottom[0],color_bottom[1]+bottom[1]))
-    print("               {}  {}".format(color_bottom[2]+bottom[2],color_bottom[3]+bottom[3]))
-    print(attr('reset'))
+    print("               {}  {}".format(color_bottom[0],color_bottom[1]))
+    print("               {}  {}".format(color_bottom[2],color_bottom[3]))
+    #print(attr('reset'))
 
 print("WELCOME TO THE RUBIX CUBE GAME")
 menu()
